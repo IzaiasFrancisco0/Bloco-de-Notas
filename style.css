@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.page{
+    display: flex;
+}
+.formulario{
+    width: 400px;
+    background-color: #111111;
+    border-right: 1px solid rgb(207, 205, 205);
+    box-shadow: 2px 2px 2px rgb(72, 72, 72);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    height: 100vh;
+}
+.busca{
+    margin-bottom: 100px;
+    margin-top: 10px;
+
+}
+.busca input{
+    padding: 10px;
+    font-family: monospace;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-bottom: 300px;
+}
+form textarea{
+    height: 200px;
+   margin-top: 5px;
+  resize: none;
+  font-size: 18px;
+  border-radius: 7px;
+  font-family: monospace;
+  font-size: 16px;
+  padding: 0;
+}
+form input{
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 7px;
+  font-family: monospace;
+  font-size: 16px;
+}
+ input:hover{
+
+border-color: red;
+}
+textarea:hover{
+    border-color: red;
+}
+ button{
+ padding: 10px;
+ margin-top: 5px;
+ font-size: 16px;
+ border-radius: 7px;
+ transition: 0.5s ease-in-out;
+ font-family: monospace;
+}
+button:hover{
+    cursor: pointer;
+  background-color: grey;
+  color: white;
+}
+.tarefas_container{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px; 
+    overflow-y: scroll;
+    background-color: #111111;
+}
+.card{
+    margin-top: 5px;
+    background-color: rgb(50, 50, 50);
+    height: 330px;
+    margin-left: 10px;
+    border: 1px solid rgb(171, 170, 170);
+    box-shadow: 2px 2px 2px rgb(104, 104, 104);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px black;
+    color: white;
+    border: none;
+ font-family: monospace;
+ 
+}
+
+.card_tarefa{
+    width: 260px;
+    height: 320px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+  border-radius: 10px;
+   margin-left: 10px;
+   margin-top: 10px;
+
+}
+.titulo{
+    text-align: center;
+    margin-top: 5px;
+  
+}
+.hora_card{
+ border-radius: 7px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+.data_card{
+    text-align: center;
+    margin-top: 15px;
+border-radius: 7px;
+font-size: 16px;
+font-weight: bold;
+}
+.texto{
+    margin-top: 15px;
+    background-color: transparent;
+    height: 250px;
+   word-wrap: break-word;
+   padding: 5px;
+ font-size: 23px;
+ overflow-y: scroll;
+ border-top: 2px solid rgb(162, 161, 161);
+ border-radius: 7px;
+
+}
+.sobre_nota{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.sobre_nota i{
+    font-size: 20px;
+    color: #1d1d1d;
+}
+.sobre_nota i{
+    cursor: pointer;
+   
+}
+
+.btn_black{
+  width: 20px;
+  height: 20px;
+  background-color: rgb(36, 36, 36);
+  border-radius: 100%;
+  margin-top: 5px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+.btn_white{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(238, 243, 238);
+    color: black;
+    border-radius: 100%;
+    margin-top: 5px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+.color_black{
+    background-color: rgb(50, 50, 50);
+    color: white;
+}
+.color_white{
+    background-color: rgb(245, 239, 239);
+   color: black;
+}
+
+
+
+::-webkit-scrollbar {
+    width: 7px; /* Largura da scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; /* Cor do fundo da área da scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* Cor da parte rolante da scrollbar */
+    border-radius: 10px; /* Cantos arredondados */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Cor da parte rolante quando o cursor está sobre ela */
+}
+
+@media (width < 401px) {
+    .page {
+        flex-direction: column;
+    }
+
+    .formulario {
+        width: 100%;
+        border-bottom: none;
+        border-right: 2px solid rgb(19, 19, 19);
+        height: 70vh;
+        flex-direction: column-reverse;
+        justify-content: center;
+        border-bottom: 1px solid grey;
+   
+    }
+    form{
+        margin-bottom: 100px;
+        margin-top: 50px;
+    }
+
+    .tarefas_container {
+      height: 50vh;
+      display: flex;
+        padding: 0;
+        justify-content: flex-start;
+        overflow-x: scroll;
+    }
+
+    .card {
+        margin-top: 20px;
+       width: 300px;
+       height: 400px;
+        margin-left: 10px;
+    }
+
+    .card_tarefa {
+        width: 260px;
+        height: 320px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    .texto {
+        height: 250px;
+        font-size: 23px;
+    }
+}
